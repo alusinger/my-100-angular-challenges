@@ -1,27 +1,18 @@
 # My100AngularChallenges
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.2.7.
+This follows the Udemy course Angular 100 Challenge. 
+https://www.udemy.com/course/100-angular-challenge/ 
 
-## Development server
+The purpose of this is to practice creating basic reusable components. 
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+This project will include Components, Directives, Services, Pipes and more. It will also include Jasmine and Unit Testing. 
 
-## Code scaffolding
+I will use the following technologies in creating this. 
+- Typescript
+- JavaScript
+- HTML / CSS
+- Jasmine / Unit Testing
+- SASS
+- FontAwesome
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+Credit: Dylan Israel - https://github.com/Dylan-Israel/100-angular-challenges
