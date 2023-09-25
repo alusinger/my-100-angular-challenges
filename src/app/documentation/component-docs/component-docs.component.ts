@@ -1,12 +1,12 @@
 import { Component } from '@angular/core';
-import { AccordionItem } from './interfaces';
+import { AccordionItem } from 'src/app/documentation/component-docs/interfaces';
 
 @Component({
-  selector: 'app-components',
-  templateUrl: './components.component.html',
-  styleUrls: ['./components.component.scss']
+  selector: 'app-component-docs',
+  templateUrl: './component-docs.component.html',
+  styleUrls: ['./component-docs.component.scss']
 })
-export class ComponentsComponent {
+export class ComponentDocsComponent {
 
   public accordionItems: AccordionItem[] = [
     {
@@ -20,5 +20,6 @@ export class ComponentsComponent {
       isExpanded: false,
     }
   ];
-
+  public progressValue = 25;
+  
 }

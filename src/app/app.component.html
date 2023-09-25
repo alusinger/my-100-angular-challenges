@@ -1,2 +1,16 @@
-<app-components></app-components>
-<router-outlet></router-outlet>
+<app-toolbar [title]="'100 Angular Challenge'">
+    <ul>
+        <li routerLink="" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Components</li>
+        <li>Directives</li>
+        <li>Services</li>
+        <li>Pipes</li>
+        <li>Other</li>
+    </ul>
+</app-toolbar>
+
+<main>
+    <router-outlet></router-outlet>
+</main>  
+
+<app-top-of-page></app-top-of-page>
+
