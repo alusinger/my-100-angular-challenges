@@ -1,0 +1,10 @@
+<app-card [iconClasses]="'fas fa-info-circle'" [title]="'Truncate'" [subTitle]="'Pipes'">
+    <p body class="untruncated">
+        <B>Untruncated:</B>
+        {{'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illum, qui! Ut facilis ducimus itaque iste est perferendis consectetur nemo a eius debitis exercitationem officia?' }}
+    </p>
+    
+    <p body>
+        <B>Truncated:</B> {{'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illum, qui! Ut facilis ducimus itaque iste est perferendis consectetur nemo a eius debitis exercitationem officia?' | truncate: 75 }}
+    </p>
+</app-card>
