@@ -14,7 +14,7 @@ import { OtherDocsComponent } from './documentation/other-docs/other-docs.compon
     ToolbarComponent,
     TopOfPageComponent,
     DirectiveDocsComponent,
-    OtherDocsComponent
+    OtherDocsComponent,
   ],
   imports: [
     BrowserModule,
