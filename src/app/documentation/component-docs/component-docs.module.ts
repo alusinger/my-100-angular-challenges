@@ -6,6 +6,7 @@ import { ComponentDocsComponent } from "./component-docs.component";
 import { AccordionModule } from "src/app/documentation/component-docs/components/accordion/accordion.module";
 import { RouterModule } from "@angular/router";
 import { LoaderModule } from "src/app/components/loader/loader.module";
+import { CreditCardInputModule } from "./components/credit-card-input/credit-card-input.module";
 
 
 const routes = [
@@ -16,7 +17,7 @@ const routes = [
 ];
 
 @NgModule({
-    imports: [ AccordionModule, CardModule, LoaderModule, StarRatingsModule, ProgressBarModule, RouterModule.forChild(routes),],
+    imports: [ AccordionModule, CardModule, CreditCardInputModule, LoaderModule, StarRatingsModule, ProgressBarModule, RouterModule.forChild(routes),],
     declarations: [ComponentDocsComponent],
     exports: [ComponentDocsComponent]
 })
