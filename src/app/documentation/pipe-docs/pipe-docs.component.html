@@ -1,3 +1,16 @@
+<h1>Pipes</h1>
+<hr>
+
+<app-card [iconClasses]="'fas fa-info-circle'" [title]="'Credit Card Formatter'" [subTitle]="'Pipes'">
+    <div body>
+        <p>{{'1111222233334444' | creditCardFormatter }}</p>
+        <p>{{'11112222333344441111222233334444' | creditCardFormatter }}</p>
+        <p>{{'a111222233334444' | creditCardFormatter }}</p>
+    </div>
+
+</app-card>
+
+
 <app-card [iconClasses]="'fas fa-info-circle'" [title]="'Truncate'" [subTitle]="'Pipes'">
     <p body class="untruncated">
         <B>Untruncated:</B>

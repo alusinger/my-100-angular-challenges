@@ -4,6 +4,7 @@ import { PipeDocsComponent } from './pipe-docs.component';
 import { RouterModule } from '@angular/router';
 import { TruncatePipe } from './truncate/truncate.pipe';
 import { CardModule } from 'src/app/components/card/card.module';
+import { CreditCardFormatterPipe } from './credit-card-formatter/credit-card-formatter.pipe';
 
 const routes = [
   {
@@ -16,7 +17,8 @@ const routes = [
 @NgModule({
   declarations: [
     PipeDocsComponent,
-    TruncatePipe
+    TruncatePipe,
+    CreditCardFormatterPipe
   ],
   imports: [
     CommonModule,
