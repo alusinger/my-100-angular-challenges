@@ -1,8 +1,10 @@
 <h1>Components</h1>
 <hr>
 
-<app-card [iconClasses]="'fas fa-info-circle'" [title]="'Creidt Card Input'" [subTitle]="'Components'">
-    <div body> 
+<app-card [iconClasses]="'fas fa-info-circle'" [title]="'Credit Card Input'" [subTitle]="'Components'">
+    <div body>
+        <h6>Icon Detects CC type entered:</h6>
+        <br>
         <app-credit-card-input [creditCardNumber]="'3321432143214321'" [isReadonly]="false"></app-credit-card-input>
         <br>
         <app-credit-card-input [creditCardNumber]="'4321432143214321'" [isReadonly]="false"></app-credit-card-input>
@@ -11,15 +13,18 @@
         <br>
         <app-credit-card-input [creditCardNumber]="'6321432143214321'" [isReadonly]="false"></app-credit-card-input>
         <br>
+        <h6>Input masks all but last 4 in Credit Card Number:</h6>
+        <br>
         <app-credit-card-input [creditCardNumber]="'4321432143214321'" [isReadonly]="true"></app-credit-card-input>
     </div>
 </app-card>
 
-<app-card>
-    <p>Top of Page</p>
+<app-card [iconClasses]="'fas fa-info-circle'" [title]="'Top of Page'" [subTitle]="'Components'">
+    <p body>Reduce Windowsize to less than 400px and scroll down. Top of Page button will appear.</p>
 </app-card>
 
 <app-card [iconClasses]="'fas fa-info-circle'" [title]="'Loader'" [subTitle]="'Components'">
+    <p body>Loading Icon is currently disabled. Hard Coded to false.</p>
     <app-loader body [isLoading]="false"></app-loader>
 </app-card>
 
