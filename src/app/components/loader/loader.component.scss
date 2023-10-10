@@ -1,22 +1,26 @@
 .loader-overlay {
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background-color: rgba(255, 255, 255, 0.6);
-    z-index: 2;
-    backdrop-filter: blur(5px) saturate(180%);
+    // Commented out overlay because we are showing the loading animation in the card for the loading animation. 
+    // position: fixed;
+    // top: 0;
+    // bottom: 0;
+    // left: 0;
+    // right: 0;
+    // background-color: rgba(255, 255, 255, 0.6);
+    // z-index: 2;
+    // backdrop-filter: blur(5px) saturate(180%);
 
     .loader-container {
-        display: flex;
-        justify-content: center;
+        // display: flex;
+        // justify-content: center;
 
         .loader {
-            position: absolute;
-            top: 50%;
-            left: 50%;
+            // position: absolute;
+            // top: 35%;
             // transform: translate(-50%, -50%);
+
+            h1 {
+                width: 150px;
+            }
 
             .circular {
                 $border-props: 10px solid;
@@ -26,6 +30,8 @@
                 width: 100px;
                 height: 100px;
                 animation: spin 1s infinite ease-in-out;
+
+                
 
                 @keyframes spin {
                     0% {

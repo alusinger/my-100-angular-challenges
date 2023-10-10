@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { LoaderType } from 'src/app/components/loader/loader-type.enum';
 import { AccordionItem } from 'src/app/documentation/component-docs/interfaces';
 
 @Component({
@@ -21,5 +22,8 @@ export class ComponentDocsComponent {
     }
   ];
   public progressValue = 25;
+  public loaderTypeLoading = LoaderType.Loading;
+  public loaderTypeCircular = LoaderType.Circular;
+
   
 }

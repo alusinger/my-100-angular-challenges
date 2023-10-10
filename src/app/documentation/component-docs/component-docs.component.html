@@ -1,6 +1,10 @@
 <h1>Components</h1>
 <hr>
 
+<app-card [iconClasses]="'fas fa-info-circle'" [title]="'Text Loader'" [subTitle]="'Components'">
+    <app-loader body [isLoading]="true" [loaderType]="loaderTypeLoading"></app-loader>
+</app-card>
+
 <app-card [iconClasses]="'fas fa-info-circle'" [title]="'Credit Card Input'" [subTitle]="'Components'">
     <div body>
         <h6>Icon Detects CC type entered:</h6>
@@ -20,12 +24,11 @@
 </app-card>
 
 <app-card [iconClasses]="'fas fa-info-circle'" [title]="'Top of Page'" [subTitle]="'Components'">
-    <p body>Reduce Windowsize to less than 400px and scroll down. Top of Page button will appear.</p>
+    <p body>Scroll down. Top of Page button will appear. Click the button to return to the top of the page.</p>
 </app-card>
 
-<app-card [iconClasses]="'fas fa-info-circle'" [title]="'Loader'" [subTitle]="'Components'">
-    <p body>Loading Icon is currently disabled. Hard Coded to false.</p>
-    <app-loader body [isLoading]="false"></app-loader>
+<app-card [iconClasses]="'fas fa-info-circle'" [title]="'Circular Loader'" [subTitle]="'Components'">
+    <app-loader body [isLoading]="true" [loaderType]="loaderTypeCircular"></app-loader>
 </app-card>
 
 <app-card [iconClasses]="'fas fa-info-circle'" [title]="'Overlay'" [subTitle]="'Components'">
@@ -44,6 +47,6 @@
 <app-card [iconClasses]="'fas fa-info-circle'" [title]="'Progress Bar'" [subTitle]="'Components'">
     <app-progress-bar body [value]="progressValue"></app-progress-bar>
 
-    <button footer (click)="progressValue = 75;">Update</button>
+    <button footer (click)="progressValue = 75;">Start / Stop</button>
 </app-card>
 

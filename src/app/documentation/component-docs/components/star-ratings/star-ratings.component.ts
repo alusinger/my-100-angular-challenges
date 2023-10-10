@@ -6,30 +6,60 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./star-ratings.component.scss']
 })
 export class StarRatingsComponent {
-  @Input() public rating = 5;
 
-  highestRating = 5;
+  @Input() rating: number = 0; // You can input rating from parent component
 
-  public get fullStars(): number[] {
-    const totalFullStars = Math.floor(this.rating);
+  fullStars: number[] = [];
+  hasHalfStar: boolean = false;
+  emptyStars: number[] = [];
 
-    return Array(totalFullStars).fill(0);
-
+  ngOnChanges() {
+    this.calculateStars();
   }
 
-  public get hasHalfStar(): boolean {
-    const hasHalfStar = (this.rating - Math.floor(this.rating) >= 0.5) && this.rating !== this.highestRating;
-    return hasHalfStar;
+  private calculateStars(): void {
+    // Calculate full stars
+    const fullStarsCount = Math.floor(this.rating);
+    this.fullStars = Array(fullStarsCount).fill(0);
+    console.log(this.fullStars);
+
+    // Check for half star
+    this.hasHalfStar = (this.rating % 1) !== 0;
+    console.log(this.hasHalfStar);
+
+    // Calculate empty stars
+    const emptyStarsCount = 5 - fullStarsCount - (this.hasHalfStar ? 1 : 0); 
+    // Assuming you have a max rating of 5
+    this.emptyStars = Array(emptyStarsCount).fill(0);
+    console.log(this.emptyStars);
   }
 
-  public get emptyStars(): number[] {
-    let totalEmptyStars = Math.floor(this.highestRating - this.rating);
-    if (this.rating - Math.floor(this.rating) < 0.5) {
-      totalEmptyStars++;
-    }
+  // @Input() public rating = 5;
 
-    return Array(totalEmptyStars).fill(0);
-  }
+  // highestRating = 5;
+
+
+
+  // public get fullStars(): number[] {
+  //   const totalFullStars = Math.floor(this.rating);
+
+  //   return Array(totalFullStars).fill(0);
+
+  // }
+
+  // public get hasHalfStar(): boolean {
+  //   const hasHalfStar = (this.rating - Math.floor(this.rating) >= 0.5) && this.rating !== this.highestRating;
+  //   return hasHalfStar;
+  // }
+
+  // public get emptyStars(): number[] {
+  //   let totalEmptyStars = Math.floor(this.highestRating - this.rating);
+  //   if (this.rating - Math.floor(this.rating) < 0.5) {
+  //     totalEmptyStars++;
+  //   }
+
+  //   return Array(totalEmptyStars).fill(0);
+  // }
 
   // public get modHalfStar(): boolean {
   //   const hasHalfStar = (this.rating % 1 >= 0.5) && this.rating !== this.highestRating;

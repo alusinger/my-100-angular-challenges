@@ -1,7 +1,13 @@
-<div class="loader-overlay" [style.display]="isLoading ? 'block' : 'none'">
+<!-- Commented out overlay because we are showing the loading animation in the card for the loading animation.  -->
+<!-- Switch the commented out overlay if using this loader as a full page overlay.  -->
+<div class="loader-overlay">
+<!-- <div class="loader-overlay" [style.display]="isLoading ? 'block' : 'none'"> -->
     <div class="loader-container">
         <div class="loader">
-            <div class="circular"></div>
+            <ng-container [ngSwitch]="loaderType">
+                <h1 *ngSwitchCase="LoaderType.Loading">{{loadingText}}</h1>
+                <div class="circular" *ngSwitchCase="LoaderType.Circular"></div>
+            </ng-container>
         </div>
     </div>
 </div>
