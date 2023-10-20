@@ -1,0 +1,39 @@
+import { Injectable } from '@angular/core';
+import { Title } from '@angular/platform-browser';
+import { ActivatedRoute, NavigationEnd, Router } from '@angular/router';
+import { filter } from 'rxjs/operators';
+
+@Injectable({
+  providedIn: 'root'
+})
+export class TitleService {
+
+  constructor(
+    public title: Title,
+    public router: Router,
+    public activatedRoute: ActivatedRoute,
+  ) { }
+
+  public initializeTitleService() {
+    this.router.events.pipe(
+      filter((event: any): boolean => event instanceof NavigationEnd)
+    ).subscribe((): void => {
+      const { data } = this.activatedRoute.root.firstChild!.snapshot;
+      const mainTitle : "100 Angular Challenge" = '100 Angular Challenge';
+      const lastTitle = this.title.getTitle();
+
+      if (data['title']) {
+        const title: string = `${mainTitle} - ${data['title']}`;
+
+        if (lastTitle !== title) {
+          this.title.setTitle(title);
+        }
+      } else {
+        if (lastTitle !== mainTitle) {
+          this.title.setTitle(mainTitle);
+        }
+
+      }
+    });
+  }
+}

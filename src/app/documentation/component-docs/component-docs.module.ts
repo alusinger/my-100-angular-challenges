@@ -7,6 +7,9 @@ import { AccordionModule } from "src/app/documentation/component-docs/components
 import { RouterModule } from "@angular/router";
 import { LoaderModule } from "src/app/components/loader/loader.module";
 import { CreditCardInputModule } from "./components/credit-card-input/credit-card-input.module";
+import { XPostModule } from "./components/x-post/x-post.module";
+import { LinkedinPostModule } from "./components/linkedin-post/linkedin-post.module";
+import { BannerCutOutModule } from "src/app/components/banner-cut-out/banner-cut-out.module";
 
 
 const routes = [
@@ -17,7 +20,19 @@ const routes = [
 ];
 
 @NgModule({
-    imports: [ AccordionModule, CardModule, CreditCardInputModule, LoaderModule, StarRatingsModule, ProgressBarModule, RouterModule.forChild(routes),],
+    imports: [ 
+        AccordionModule, 
+        CardModule, 
+        CreditCardInputModule,
+        BannerCutOutModule, 
+        LinkedinPostModule,
+        LoaderModule, 
+        ProgressBarModule, 
+        StarRatingsModule, 
+        RouterModule.forChild(routes),
+        XPostModule,
+        
+    ],
     declarations: [ComponentDocsComponent],
     exports: [ComponentDocsComponent]
 })

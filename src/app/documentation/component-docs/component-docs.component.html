@@ -1,5 +1,13 @@
-<h1>Components</h1>
+<app-banner-cut-out [title]="'Components'"></app-banner-cut-out>
 <hr>
+
+<app-card [iconClasses]="'fas fa-info-circle'" [title]="'LinkedIn Post'" [subTitle]="'Components'">
+    <app-linkedin-post body></app-linkedin-post>
+</app-card>
+
+<app-card [iconClasses]="'fas fa-info-circle'" [title]="'X (Twitter) Post'" [subTitle]="'Components'">
+    <app-x-post body></app-x-post>
+</app-card>
 
 <app-card [iconClasses]="'fas fa-info-circle'" [title]="'Text Loader'" [subTitle]="'Components'">
     <app-loader body [isLoading]="true" [loaderType]="loaderTypeLoading"></app-loader>

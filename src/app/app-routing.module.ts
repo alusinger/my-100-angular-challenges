@@ -14,15 +14,29 @@ const routes: Routes = [
     loadChildren: () => import('./documentation/component-docs/component-docs.module').then(m => m.ComponentDocsModule)
   },
   { 
+    data: { title: 'Directives'},
     path: 'directives', 
     loadChildren: () => import('./documentation/directive-docs/directive-docs.module').then(m => m.DirectiveDocsModule)
   },
   { 
-    path: 'pipes', component: PipeDocsComponent,
+    data: { title: 'Pipes'},
+    path: 'pipes', 
+    component: PipeDocsComponent,
     loadChildren: () => import('./documentation/pipe-docs/pipe-docs.module').then(m => m.PipeDocsModule) 
   },
-  { path: 'services', component: ServiceDocsComponent},
-  { path: 'others', component: OtherDocsComponent},
+  { 
+    data: { title: 'Services'},
+    path: 'services', 
+    component: ServiceDocsComponent,
+    loadChildren: () => import('./documentation/service-docs/service-docs.module').then(m => m.ServiceDocsModule) 
+  },
+  { 
+    data: { title: 'Other'},
+    path: 'others', 
+    component: OtherDocsComponent,
+    loadChildren: () => import('./documentation/other-docs/other-docs.module').then(m => m.OtherDocsModule) 
+  },
+  // { path: '**', component: NotFoundComponent },
 
 ];
 
