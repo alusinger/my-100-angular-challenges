@@ -21,17 +21,14 @@ export class StarRatingsComponent {
     // Calculate full stars
     const fullStarsCount = Math.floor(this.rating);
     this.fullStars = Array(fullStarsCount).fill(0);
-    console.log(this.fullStars);
 
     // Check for half star
     this.hasHalfStar = (this.rating % 1) !== 0;
-    console.log(this.hasHalfStar);
 
     // Calculate empty stars
     const emptyStarsCount = 5 - fullStarsCount - (this.hasHalfStar ? 1 : 0); 
     // Assuming you have a max rating of 5
     this.emptyStars = Array(emptyStarsCount).fill(0);
-    console.log(this.emptyStars);
   }
 
   // @Input() public rating = 5;

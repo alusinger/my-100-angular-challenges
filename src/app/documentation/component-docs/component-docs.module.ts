@@ -10,7 +10,7 @@ import { CreditCardInputModule } from "./components/credit-card-input/credit-car
 import { XPostModule } from "./components/x-post/x-post.module";
 import { LinkedinPostModule } from "./components/linkedin-post/linkedin-post.module";
 import { BannerCutOutModule } from "src/app/components/banner-cut-out/banner-cut-out.module";
-
+import { ModalModule } from "./components/modal/modal.module";
 
 const routes = [
     {
@@ -27,6 +27,7 @@ const routes = [
         BannerCutOutModule, 
         LinkedinPostModule,
         LoaderModule, 
+        ModalModule,
         ProgressBarModule, 
         StarRatingsModule, 
         RouterModule.forChild(routes),
