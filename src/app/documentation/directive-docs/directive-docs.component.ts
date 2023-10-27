@@ -6,5 +6,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./directive-docs.component.scss']
 })
 export class DirectiveDocsComponent {
+  public log() {
+    console.log('You clicked!!!');
+  }
 
 }
